@@ -28,11 +28,11 @@ function CrearTabla() {
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
         //Raya, aqui puse una clase para que en el css se ponga el pointer que se exige en el documento
         //Cambiala si quieres, modificala a tu gusto
-        TablaDatos += "<tr class='FilaTabla'><td>" + nombres[i] + "</td>";
+        TablaDatos += "<tr class='FilaTabla'><td>"+( i + 1)+ " " + nombres[i] + "</td>";
         //Aqui puse el boton para eliminar, por si tambien lo quieres cambiar
         TablaDatos += '<td><input type="button" value="Eliminar" onclick="EliminarNombre(' + i + ')"></td></tr>'; 
     }
-
+    TablaDatos += "<tr><td><strong>Total de Alumnos:</strong></td><td>" + nombres.length + "</td><td></td></tr>";
     TablaDatos += "</table>";
 
     document.getElementById('tabla').innerHTML = TablaDatos; 
