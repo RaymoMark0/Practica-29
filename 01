@@ -6,6 +6,10 @@
     <title>Practica-29</title>
 </head>
 <body>
+    <input type="text" id="nombres" placeholder="Introduce un nombre">
+    <input type="button" value="Guardar" onclick="GuardarNombre()"> <br>
+    <p id="mensaje"></p>
+    <div id="tabla"></div>
 <!--hola-->
 <!--Hola 2-->
 </body>
