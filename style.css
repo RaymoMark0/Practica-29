@@ -54,19 +54,24 @@ p{
 #nombres:hover{ 
     background-color: white; 
     transform: scale(1.04);
-    border-color: #00a2ff; 
+    border-color: #00a2ff;  
     box-shadow:5px 5px 5px rgba(0, 0, 0, 0.224); 
     border-radius: 0.5em;
-
 }
 .Eliminar{
-    background-color: #cccccc;
+    background-color: #e4e4e4;
     text-align: center;
     border-radius: 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.598);  
     transition: 0.3s ease;
     margin-left: 20px;
     padding: 5px;
+    transition: 0.1s ease;
+}
+.Eliminar:hover{
+    background-color: #00a2ff;
+    color: white;
+    transform: scale(1.07);
 
 }
 #tabla { 
