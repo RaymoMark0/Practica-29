@@ -26,7 +26,7 @@ function CrearTabla() {
     TablaDatos += "<tr><th>Lista de Alumnos</th><th>Eliminar</th></tr>";
 
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
-        TablaDatos += "<tr><td>" + (i + 1) + " " + nombres[i] +" &nbsp; <input type='button' class='Eliminar' value='Eliminar' onclick='EliminarNombre(" + i + ")'></td></tr>";   
+        TablaDatos += "<tr><td>" + (i + 1) + " " + nombres[i] +"<input type='button' class='Eliminar' value='Eliminar' onclick='EliminarNombre(" + i + ")'></td></tr>";   
     }
     TablaDatos += "<tr><td><strong>Total de Alumnos:</strong></td><td>" + nombres.length + "</td></tr>";
     TablaDatos += "</table>";
