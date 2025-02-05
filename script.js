@@ -21,14 +21,15 @@ function EliminarNombre(indice) {
 
 // Función para crear la tabla
 function CrearTabla() {
+    document.getElementById('mensaje').innerHTML ="" //eliminar el texto: "Introduce un nombre válido"
     //hice una tabla temporal de mientras el encargado del css hacia lo suyo, para ir viendo mas o menos como funionaría
-    var TablaDatos = "<table border='1'>";
+    var TablaDatos = "<table>";
     TablaDatos += "<tr><th>Lista de Alumnos</th><th>Eliminar</th></tr>";
 
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
         //Raya, aqui puse una clase para que en el css se ponga el pointer que se exige en el documento
         //Cambiala si quieres, modificala a tu gusto
-        TablaDatos += "<tr class='FilaTabla'><td>"+( i + 1)+ " " + nombres[i] + "</td>";
+        TablaDatos += "<tr><td>"+( i + 1)+ " " + nombres[i] + "</td>";
         //Aqui puse el boton para eliminar, por si tambien lo quieres cambiar
         TablaDatos += '<td><input type="button" value="Eliminar" onclick="EliminarNombre(' + i + ')"></td></tr>'; 
     }
