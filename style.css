@@ -59,6 +59,16 @@ p{
     border-radius: 0.5em;
 
 }
+.Eliminar{
+    background-color: #cccccc;
+    text-align: center;
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.598);  
+    transition: 0.3s ease;
+    margin-left: 20px;
+    padding: 5px;
+
+}
 #tabla { 
     border-radius: 1em;
     display: flex;
