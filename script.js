@@ -9,7 +9,7 @@ function GuardarNombre() {
     if (nombre) {
         nombres.push(nombre);
         CrearTabla();
-        document.getElementById('nombres').value = ""; // Limpia el input al pulsar "guardar"
+        document.getElementById('nombres').value = ""; 
     } else{
         document.getElementById('mensaje').innerHTML = "Introduce un nombre válido";
     }
@@ -31,7 +31,7 @@ function Seleccionar(indice){
     document.getElementById('cancelar').style.display = 'inline-block';
 }
 
-//unción para editar el nombre seleccionado
+//Función para editar el nombre seleccionado
 function EditarNombre(){
     var NombreNuevo = document.getElementById('nombres').value;
 
