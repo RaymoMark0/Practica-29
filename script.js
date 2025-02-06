@@ -65,8 +65,7 @@ function CrearTabla() {
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
         TablaDatos += "<tr onclick='Seleccionar(" + i + ")'><td>" + (i + 1) + " - " + nombres[i] +"</td><td><input type='button' class='Eliminar' value='Eliminar' onclick='EliminarNombre(" + i + ")'</td></tr>";   
     }
-    TablaDatos += "<tr><td><strong>Total de Alumnos:</strong></td><td>" + nombres.length + "</td></tr>";
-    TablaDatos += "</table>";
+    TablaDatos += "<tr><td><strong>Total de Alumnos:</strong></td><td>" + nombres.length + "</td></tr></table>";
 
     document.getElementById('tabla').innerHTML = TablaDatos; 
 }
