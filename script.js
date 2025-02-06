@@ -60,7 +60,7 @@ function Cancelar(){
 function CrearTabla() {
     document.getElementById('mensaje').innerHTML =""
     var TablaDatos = "<table>";
-    TablaDatos += "<tr><th>Lista de Alumnos</th><th>Eliminar</th></tr>";
+    TablaDatos += "<tr><th>Lista de Alumnos</th></tr>";
 
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
         TablaDatos += "<tr onclick='Seleccionar(" + i + ")'><td>" + (i + 1) + " " + nombres[i] +"<input type='button' class='Eliminar' value='Eliminar' onclick='EliminarNombre(" + i + ")'></td></tr>";   
