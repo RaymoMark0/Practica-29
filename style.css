@@ -113,6 +113,9 @@ p{
     align-items: center;
     justify-content: center;
 }
+.lista{
+    font-size: 25px;
+}
 button{ 
     height: 56px;  
     width: 100px; 
