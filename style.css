@@ -7,6 +7,10 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
     height: 100vh;
 }
+.dark-mode {
+    background: linear-gradient(45deg, #4e4e4e, #003d60); 
+    color: white;
+}
 h1{
     padding: 1em;
     color: #ffffff; 
