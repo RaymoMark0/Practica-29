@@ -18,7 +18,7 @@ body{
     border-radius: 1em;
     margin: 10px;
     margin-left: 30px;
-    background-color: #969696;
+    background-color: #747474;
     transition: 0.2s ease;
     color: rgb(255, 255, 255); 
 }
@@ -27,6 +27,12 @@ h1{
     padding: 1em;
     color: #ffffff; 
     font-size: 40px;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 p{
     font-size: 30px;
@@ -80,7 +86,7 @@ p{
     transform: scale(1.04);
     border-color: #00a2ff;  
     box-shadow:5px 5px 5px rgba(0, 0, 0, 0.224); 
-    border-radius: 0.5em;
+    border-radius: 0.7em;
 }
 #tabla { 
     border-radius: 1em;
@@ -151,9 +157,10 @@ button:active{
     margin-left: 5px;
 }
 .boton2:hover{
-    background-color: #00a2ff;
-    color: white;
-    transform: scale(1.07);
+    background-color: #4abdff;
+    border-color:  #0079bf;
+    box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
+    transform: scale(1.04); 
 }
 .boton2:active{ 
     transform: scale(0.9); 
@@ -169,7 +176,7 @@ button:active{
     background-repeat: no-repeat;
     text-align: center;
     width: 50px;
-    border-radius: 0.5em;
+    border-radius: em;
     border: 1px solid rgba(0, 0, 0, 0.598);  
     transition: 0.3s ease;
     padding: 5px;
@@ -177,15 +184,18 @@ button:active{
     margin-right: 5px;
     margin-left: 10px;
 }
-.buscar:hover{
-    background-color: #00a2ff;
-    color: white;
-    transform: scale(1.07);
-}
-.buscar:active{ 
-    transform: scale(0.9); 
-    background-color: #cbecff;
-    border-color:  rgb(0, 162, 255);
-    color: black;
-    box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
+.botonguardar{
+    background-color: #0084ff;
+    background-image: url(save.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 50px;
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.598);  
+    transition: 0.3s ease;
+    padding: 5px;
+    transition: 0.1s ease;
+    margin-right: 5px;
+    margin-left: 10px;
 }

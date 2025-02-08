@@ -1,9 +1,3 @@
-
-function darkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-
 var nombres = [];
 var NombreSeleccionado = "";
 
@@ -74,3 +68,19 @@ function CrearTabla() {
 
     document.getElementById('tabla').innerHTML = TablaDatos; 
 }
+
+//Función cambiar el tema a modo oscuro
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
+//Función para activar el botón de guardar al darle al intro
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("nombres").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") { 
+            event.preventDefault(); 
+            document.getElementById("guardar").click();
+        }
+    });
+});
