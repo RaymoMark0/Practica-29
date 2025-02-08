@@ -51,6 +51,14 @@ p{
     display: flex; 
     align-items: center;
     justify-content: center;
+
+}
+.caja3{ 
+    margin: 25px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
 }
 .tit2{
     display: flex;
@@ -73,6 +81,63 @@ p{
     border-color: #00a2ff;  
     box-shadow:5px 5px 5px rgba(0, 0, 0, 0.224); 
     border-radius: 0.5em;
+}
+#tabla { 
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 30px; 
+    padding: 30px;
+    background-color:  #00507f; 
+    transition: 0.3s ease;
+    color: white;
+    border:none;
+}
+#tabla:hover{
+    background-color: #00649e; 
+}
+#tabla td {
+    margin: 15px;
+    padding: 15px;  
+    text-align: center;
+    background-color: #0084ff;  
+    transition: 0.3s ease;
+    border: none;
+    border-radius: 0.5em ;
+} 
+#tabla td:hover {
+    background-color:  #ffffff; 
+    color: rgb(81, 81, 81);
+    cursor: pointer; 
+    border-radius: 0.2em;
+}
+.lista{
+    font-size: 20px;
+}
+button{ 
+    height: 35px;  
+    width: 100px; 
+    border: 1px, solid black;  
+    border-radius: 0.7em;
+    margin-left: 10px;
+    background-color: #0084ff;
+    transition: 0.2s ease;
+    color: rgb(255, 255, 255); 
+}
+button:hover{
+    background-color: #4abdff;
+    border-color:  #0079bf;
+    box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
+    transform: scale(1.04); 
+}
+button:active{ 
+    transform: scale(0.9); 
+    background-color: #cbecff;
+    border-color:  rgb(0, 162, 255);
+    color: black;
+    box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
 }
 .boton2{
     background-color: #e4e4e4;
@@ -100,15 +165,17 @@ p{
 .buscar{
     background-color: #0084ff;
     background-image: url(lupa.png);
-
+    background-position: center center;
+    background-repeat: no-repeat;
     text-align: center;
+    width: 50px;
     border-radius: 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.598);  
     transition: 0.3s ease;
     padding: 5px;
     transition: 0.1s ease;
     margin-right: 5px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .buscar:hover{
     background-color: #00a2ff;
@@ -116,65 +183,6 @@ p{
     transform: scale(1.07);
 }
 .buscar:active{ 
-    transform: scale(0.9); 
-    background-color: #cbecff;
-    border-color:  rgb(0, 162, 255);
-    color: black;
-    box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
-}
-#tabla { 
-    border-radius: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin-top: 30px; 
-    padding: 30px;
-    background-color:  #00507f; 
-    transition: 0.3s ease;
-    color: white;
-    border:none;
-}
-#tabla:hover{
-    background-color: #00649e; 
-}
-#tabla td {
-    margin: 15px;
-    padding: 15px;  
-    text-align: center;
-    background-color: #0084ff;  
-    transition: 0.3s ease;
-    border: none;
-    border-radius: 0.5em ;
-
-} 
-#tabla td:hover {
-    background-color:  #ffffff; 
-    color: rgb(81, 81, 81);
-    cursor: pointer; 
-    border-radius: 0.2em;
-}
-
-.lista{
-    font-size: 25px;
-}
-button{ 
-    height: 35px;  
-    width: 100px; 
-    border: 1px, solid black;  
-    border-radius: 0.7em;
-    margin: 30px;
-    background-color: #0084ff;
-    transition: 0.2s ease;
-    color: rgb(255, 255, 255); 
-}
-button:hover{
-    background-color: #4abdff;
-    border-color:  #0079bf;
-    box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
-    transform: scale(1.04); 
-}
-button:active{ 
     transform: scale(0.9); 
     background-color: #cbecff;
     border-color:  rgb(0, 162, 255);

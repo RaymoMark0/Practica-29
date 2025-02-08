@@ -1,3 +1,4 @@
+
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
@@ -64,7 +65,7 @@ function Cancelar(){
 function CrearTabla() {
     document.getElementById('mensaje').innerHTML =""
     var TablaDatos = "<table>";
-    TablaDatos += "<tr><th class='lista'>Lista de Alumnos</th></tr>";
+    TablaDatos += "<tr><th class='lista'>Lista de Alumnos</th><th class='lista'>Opciones<th></tr>";
 
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
         TablaDatos += "<tr><td onclick='Seleccionar(" + i + ")'>" + (i + 1) + " - " + nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='boton2' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
