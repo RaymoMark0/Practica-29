@@ -8,9 +8,21 @@ body{
     height: 100vh;
 }
 .dark-mode {
-    background: linear-gradient(45deg,#313131, #7a7a7a); 
+    background: linear-gradient(45deg,#313131, #afafaf); 
     color: white;
 }
+.darkb{ 
+    height: 36px;  
+    width: 100px; 
+    border: 2px, solid black;  
+    border-radius: 1em;
+    margin: 10px;
+    margin-left: 30px;
+    background-color: #969696;
+    transition: 0.2s ease;
+    color: rgb(255, 255, 255); 
+}
+
 h1{
     padding: 1em;
     color: #ffffff; 
@@ -62,7 +74,7 @@ p{
     box-shadow:5px 5px 5px rgba(0, 0, 0, 0.224); 
     border-radius: 0.5em;
 }
-.Eliminar{
+.boton2{
     background-color: #e4e4e4;
     text-align: center;
     border-radius: 0.5em;
@@ -70,12 +82,20 @@ p{
     transition: 0.3s ease;
     padding: 5px;
     transition: 0.1s ease;
+    margin-right: 5px;
+    margin-left: 5px;
 }
-.Eliminar:hover{
+.boton2:hover{
     background-color: #00a2ff;
     color: white;
     transform: scale(1.07);
-
+}
+.boton2:active{ 
+    transform: scale(0.9); 
+    background-color: #cbecff;
+    border-color:  rgb(0, 162, 255);
+    color: black;
+    box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
 }
 #tabla { 
     border-radius: 1em;

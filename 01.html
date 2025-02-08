@@ -10,16 +10,17 @@
 
 <body>
     <div class="caja1">
+        <div class="dark">
+            <button class="darkb" onclick="darkMode()">Dark Mode</button>
+        </div>
         <h1>Tabla de Alumnos</h1>
         <input class="tit2"type="text" id="nombres" placeholder="Introduce un nombre">
-        <button value="Guardar" id="guardar" onclick="GuardarNombre()"> Guardar</button>
+        <button class="boton" value="Guardar" id="guardar" onclick="GuardarNombre()"> Guardar</button>
         <button value="Editar" id="editar" onclick="EditarNombre()" style="display:none;">Editar</button>
         <button value="Cancelar" id="cancelar" onclick="Cancelar()" style="display:none;">Cancelar</button>
     </div>
 
-    <div class="dark">
-        <button class="darkb" onclick="darkMode()">Dark Mode</button>
-    </div>
+
 
     <p id="mensaje"></p><br>
 
