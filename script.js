@@ -62,7 +62,7 @@ function CrearTabla() {
     TablaDatos += "<tr><th class='lista'>Lista de Alumnos</th><th class='lista'>Opciones<th></tr>";
 
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
-        TablaDatos += "<tr><td onclick='Seleccionar(" + i + ")'>" + (i + 1) + " - " + nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='boton2' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
+        TablaDatos += "<tr><td onclick='Seleccionar(" + i + ")'>" + (i + 1) + " - " + nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='botonrev' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
     }
     TablaDatos += "<tr><td><strong>Total de Alumnos:</strong>" + " "+ nombres.length + "</td></tr></table>";
 
@@ -85,8 +85,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Invertir el nombre
 function reverse(indice) {
     nombres[indice] = nombres[indice].split("").reverse().join(""); 
-    CrearTabla(); 
+    
+    CrearTabla();
+
+    /*var botones = document.getElementsByClassName("botonrev");
+    
+    if (botones[indice]) {
+        if (botones[indice].value === "Reverse") {
+            botones[indice].value = "Normal";
+        } else {
+            botones[indice].value = "Reverse";
+        }
+    }*/
 }

@@ -68,11 +68,11 @@ p{
     align-self: start;
 }
 #nombres{
-    background-color: #cccccc;
+    background-color: #ccccccd8;
     text-align: center;
     width: 200px;
     border-radius: 0.5em;
-    border: 1px solid #00000000;  
+    border: 0px solid #00000000;  
     transition: 0.3s ease;
     padding: 10px;
 }
@@ -80,7 +80,7 @@ p{
     background-color: white; 
     border-color: #00a2ff00;  
     box-shadow:1px 1px 1px rgba(0, 0, 0, 0.068); 
-    border-radius: 0.7em;
+    border-radius: 0.3em;
 }
 #tabla { 
     border-radius: 0.5em;
@@ -96,23 +96,24 @@ p{
     border:none;
 }
 #tabla:hover{
-    background-color: #ffcd835e; 
+    background-color: rgba(255, 177, 61, 0.247); 
 }
 #tabla td {
-    width: 500px;
     margin: 15px;
     padding: 15px;  
     text-align: center;
     background-color: #5a5a5ac7;  
     transition: 0.2s ease;
     border: none;
-    border-radius: 0.5em ;
+    border-radius: 0.3em ;
 } 
 #tabla td:hover {
     background-color:  #ffffff71; 
     color: rgb(81, 81, 81);
     cursor: pointer; 
     border-radius: 0.2em;
+    cursor: pointer;
+    border-radius: 0.5em ;
 }
 .lista{
     font-size: 20px;
@@ -146,8 +147,8 @@ button:active{
     transition: 0.3s ease;
     padding: 5px;
     transition: 0.1s ease;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 .boton2:hover{
     background-color: #4b4b4b85;
@@ -159,6 +160,38 @@ button:active{
 .boton2:active{ 
     transform: scale(0.9); 
     background-color: #cbecff;
+    border-color:  rgb(0, 162, 255);
+    color: black;
+    box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
+}
+.botonrev{
+    background-color: #ffffff96;
+    text-align: center;
+    border-radius: 0.5em;
+    border: 0px solid;  
+    transition: 0.3s ease;
+    padding: 5px;
+    transition: 0.1s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.botonrev:hover{
+    background-color: #4b4b4b85;
+    border-color:  #0079bf;
+    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.224);
+    transform: scale(1.04); 
+    color: white;
+}
+.botonrev:active{ 
+    transform: scale(0.9); 
+    background-color: #cbecff;
+    border-color:  rgb(0, 162, 255);
+    color: black;
+    box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
+}
+.botonrevact{ 
+    transform: scale(0.9); 
+    background-color: #fff3cb;
     border-color:  rgb(0, 162, 255);
     color: black;
     box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
