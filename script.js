@@ -84,3 +84,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Invertir el nombre
+function reverse(indice) {
+    nombres[indice] = nombres[indice].split("").reverse().join(""); 
+    CrearTabla(); 
+}
