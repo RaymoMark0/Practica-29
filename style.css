@@ -4,7 +4,7 @@
 }
 
 body{
-    background-image: url('bg1.avif');    
+    background-image: url('bg2.avif');    
     font-family:"Open Sans", serif;    
     height: 100vh;
 }
@@ -16,7 +16,7 @@ body{
 h1{
     padding: 1em;
     color: #ffffff; 
-    font-size: 40px;
+    font-size: 30px;
 }
 .titulo{
     display: flex;
@@ -33,15 +33,16 @@ p{
     padding-top: 20px;
 }
 .caja1{
-    background-color:#ff99009f ;
+    background-color:#5b536eaf;
     display: flex; 
     align-items: center;
     justify-content: center; 
     border: none;
     transition: 0.3s ease;
+    height: 120px;
 }
 .caja1:hover{
-    background-color: #e2a954ab;
+    background-color: #5e498faf;
 }
 .caja2{ 
     display: flex; 
@@ -62,20 +63,23 @@ p{
     justify-content: flex-end;
     padding: 2em;
 }
+.num{
+    display: flex;
+    align-self: start;
+}
 #nombres{
     background-color: #cccccc;
     text-align: center;
     width: 200px;
     border-radius: 0.5em;
-    border: 1px solid #00000098;  
+    border: 1px solid #00000000;  
     transition: 0.3s ease;
     padding: 10px;
 }
 #nombres:hover{ 
     background-color: white; 
-    transform: scale(1.04);
-    border-color: #00a2ff;  
-    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.224); 
+    border-color: #00a2ff00;  
+    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.068); 
     border-radius: 0.7em;
 }
 #tabla { 
@@ -86,13 +90,13 @@ p{
     width: 80%;
     margin-top: 30px; 
     padding: 30px;
-    background-color:  #e2a954ab; 
+    background-color:  #f1a32d1f; 
     transition: 0.3s ease;
     color: white;
     border:none;
 }
 #tabla:hover{
-    background-color: #ffce83ab; 
+    background-color: #ffcd835e; 
 }
 #tabla td {
     width: 500px;
@@ -100,12 +104,12 @@ p{
     padding: 15px;  
     text-align: center;
     background-color: #5a5a5ac7;  
-    transition: 0.3s ease;
+    transition: 0.2s ease;
     border: none;
     border-radius: 0.5em ;
 } 
 #tabla td:hover {
-    background-color:  #ffffff; 
+    background-color:  #ffffff71; 
     color: rgb(81, 81, 81);
     cursor: pointer; 
     border-radius: 0.2em;
@@ -116,31 +120,29 @@ p{
 button{ 
     height: 35px;  
     width: 100px; 
-    border: 1px, solid black;  
+    border: 0px, solid black;  
     border-radius: 0.7em;
     margin-left: 10px;
-    background-color: #646464;
+    background-color: #6464645e;
     transition: 0.2s ease;
     color: rgb(255, 255, 255); 
 }
 button:hover{
-    background-color: #ff8800;
-    border-color:  #0079bf;
-    box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
-    transform: scale(1.04); 
+    background-color: #ffffff65;
+    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.224);
 }
 button:active{ 
     transform: scale(0.9); 
-    background-color: #cbecff;
+    background-color: #ffffff9d;
     border-color:  rgb(0, 162, 255);
     color: black;
     box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
 }
 .boton2{
-    background-color: #e4e4e4;
+    background-color: #ffffff96;
     text-align: center;
     border-radius: 0.5em;
-    border: 1px solid rgba(0, 0, 0, 0.598);  
+    border: 0px solid;  
     transition: 0.3s ease;
     padding: 5px;
     transition: 0.1s ease;
@@ -148,9 +150,9 @@ button:active{
     margin-left: 5px;
 }
 .boton2:hover{
-    background-color: #ff8800;
+    background-color: #4b4b4b85;
     border-color:  #0079bf;
-    box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
+    box-shadow:1px 1px 1px rgba(0, 0, 0, 0.224);
     transform: scale(1.04); 
     color: white;
 }
@@ -162,14 +164,14 @@ button:active{
     box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
 }
 .buscar{
-    background-color: #646464;
+    background-color: #6464645e;
     background-image: url(lupa.png);
     background-position: center center;
     background-repeat: no-repeat;
     text-align: center;
     width: 50px;
     border-radius: em;
-    border: 1px solid rgba(0, 0, 0, 0.598);  
+    border: 0px solid rgba(0, 0, 0, 0.598);  
     transition: 0.3s ease;
     padding: 5px;
     transition: 0.1s ease;
@@ -177,14 +179,14 @@ button:active{
     margin-left: 10px;
 }
 .botonguardar{
-    background-color: #646464;
+    background-color: #6464645e;
     background-image: url(save.png);
     background-position: center center;
     background-repeat: no-repeat;
     text-align: center;
     width: 50px;
     border-radius: 0.5em;
-    border: 1px solid rgba(0, 0, 0, 0.598);  
+    border: 0px solid rgba(0, 0, 0, 0.598);  
     transition: 0.3s ease;
     padding: 5px;
     transition: 0.1s ease;
@@ -197,11 +199,11 @@ button:active{
     background-repeat: no-repeat;
     height: 36px;  
     width: 50px; 
-    border: 2px, solid black;  
+    border: 0px, solid black;  
     border-radius: 2em;
     margin: 10px;
     margin-left: 30px;
-    background-color: #646464;
+    background-color: #6464645e;
     transition: 0.2s ease;
     color: rgb(255, 255, 255); 
 }
