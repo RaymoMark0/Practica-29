@@ -3,29 +3,14 @@
     padding: 0;
 }
 body{
-    background: linear-gradient(45deg, #1379b4, #ffffff);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
-    height: 100vh;
+background-image: url('bg1.avif');    
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+height: 100vh;
 }
 .dark-mode {
     background: linear-gradient(45deg,#313131, #afafaf); 
     color: white;
 }
-.darkb{ 
-    background-image: url(dark.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 36px;  
-    width: 50px; 
-    border: 2px, solid black;  
-    border-radius: 1em;
-    margin: 10px;
-    margin-left: 30px;
-    background-color: #474747;
-    transition: 0.2s ease;
-    color: rgb(255, 255, 255); 
-}
-
 h1{
     padding: 1em;
     color: #ffffff; 
@@ -39,14 +24,14 @@ h1{
 }
 p{
     font-size: 30px;
-    display: flex; 
+    display: flex;  
     align-items: center;
     justify-content: center;
     color: #00507f;
     padding-top: 20px;
 }
 .caja1{
-    background-color: #00507f;
+    background-color: #e2a954ab;
     display: flex; 
     align-items: center;
     justify-content: center; 
@@ -54,7 +39,7 @@ p{
     transition: 0.3s ease;
 }
 .caja1:hover{
-    background-color: #00649e;
+    background-color: #ff9900b7;
 }
 .caja2{ 
     display: flex; 
@@ -79,10 +64,10 @@ p{
     background-color: #cccccc;
     text-align: center;
     width: 200px;
-    border-radius: 1em;
-    border: 1px solid rgba(0, 0, 0, 0.598);  
+    border-radius: 0.5em;
+    border: 1px solid #00000098;  
     transition: 0.3s ease;
-    padding: 20px;
+    padding: 10px;
 }
 #nombres:hover{ 
     background-color: white; 
@@ -92,26 +77,26 @@ p{
     border-radius: 0.7em;
 }
 #tabla { 
-    border-radius: 1em;
+    border-radius: 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 80%;
     margin-top: 30px; 
     padding: 30px;
-    background-color:  #00507f; 
+    background-color:  #e2a954ab; 
     transition: 0.3s ease;
     color: white;
     border:none;
 }
 #tabla:hover{
-    background-color: #00649e; 
+    background-color: #ff9900b7; 
 }
 #tabla td {
     margin: 15px;
     padding: 15px;  
     text-align: center;
-    background-color: #0084ff;  
+    background-color: #5a5a5a;  
     transition: 0.3s ease;
     border: none;
     border-radius: 0.5em ;
@@ -136,7 +121,7 @@ button{
     color: rgb(255, 255, 255); 
 }
 button:hover{
-    background-color: #4abdff;
+    background-color: #ff8800;
     border-color:  #0079bf;
     box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
     transform: scale(1.04); 
@@ -160,10 +145,11 @@ button:active{
     margin-left: 5px;
 }
 .boton2:hover{
-    background-color: #4abdff;
+    background-color: #ff8800;
     border-color:  #0079bf;
     box-shadow:3px 3px 3px rgba(0, 0, 0, 0.224);
     transform: scale(1.04); 
+    color: white;
 }
 .boton2:active{ 
     transform: scale(0.9); 
@@ -173,7 +159,7 @@ button:active{
     box-shadow:0px 0px 0px rgba(0, 0, 0, 0);
 }
 .buscar{
-    background-color: #0084ff;
+    background-color: #a5a5a5;
     background-image: url(lupa.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -188,7 +174,7 @@ button:active{
     margin-left: 10px;
 }
 .botonguardar{
-    background-color: #0084ff;
+    background-color: #a5a5a5;
     background-image: url(save.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -201,4 +187,18 @@ button:active{
     transition: 0.1s ease;
     margin-right: 5px;
     margin-left: 10px;
+}
+.darkb{ 
+    background-image: url(dark.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 36px;  
+    width: 50px; 
+    border: 2px, solid black;  
+    border-radius: 2em;
+    margin: 10px;
+    margin-left: 30px;
+    background-color: #a5a5a5;
+    transition: 0.2s ease;
+    color: rgb(255, 255, 255); 
 }
