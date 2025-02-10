@@ -59,10 +59,10 @@ function Cancelar(){
 function CrearTabla() {
     document.getElementById('mensaje').innerHTML =""
     var TablaDatos = "<table>";
-    TablaDatos += "<tr><th class='lista'>Lista de Alumnos</th><th class='lista'>Opciones<th></tr>";
+    TablaDatos += "<tr><th class='lista'>Número</th><th class='lista'>Nombre de Alumno</th><th class='lista'>Opciones</th></tr>";
 
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
-        TablaDatos += "<tr><td onclick='Seleccionar(" + i + ")'>" + (i + 1) + " - " + nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='botonrev' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
+        TablaDatos += "<tr><td>"+(i + 1)+"</td> <td onclick='Seleccionar(" + i + ")'>"+ nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='botonrev' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
     }
     TablaDatos += "<tr><td><strong>Total de Alumnos:</strong>" + " "+ nombres.length + "</td></tr></table>";
 
