@@ -58,6 +58,15 @@ function Cancelar(){
 // Función para crear la tabla
 function CrearTabla() {
     document.getElementById('mensaje').innerHTML =""
+
+    var estadisticas = obtenerEstadisticas();
+    
+    var totalLetras = estadisticas[0];
+    var minLetras = estadisticas[1];
+    var maxLetras = estadisticas[2];
+    var PromedioLongitudNombres = estadisticas[3];
+
+
     var TablaDatos = "<table>";
     TablaDatos += "<tr><th class='lista'>Número</th><th class='lista'>Nombre de Alumno</th><th class='lista'>Opciones</th></tr>";
 
@@ -65,25 +74,6 @@ function CrearTabla() {
         TablaDatos += "<tr><td>"+(i + 1)+"</td> <td onclick='Seleccionar(" + i + ")'>"+ nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='botonrev' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
     }
     TablaDatos += "<tr><td><strong>Total de Alumnos:</strong>" + " "+ nombres.length + "</td></tr>";
-
-    // Esto son las estadisticas de los nombres
-    var totalLetras = 0;
-    var minLetras = nombres[0].length;
-    var maxLetras = nombres[0].length;
-
-    for (var i = 0; i < nombres.length; i++) {
-        var longitud = nombres[i].length;
-        totalLetras += longitud;
-
-        if (longitud < minLetras) {
-            minLetras = longitud;
-        }
-        if (longitud > maxLetras) {
-            maxLetras = longitud;
-        }
-    }
-
-    var PromedioLongitudNombres = (totalLetras / nombres.length).toFixed(2);
 
     //Añadir las estadisticas al final
     TablaDatos += "<tr><td colspan='3'><strong>Promedio de longitud:</strong> " + PromedioLongitudNombres + " letras</td></tr><tr><td colspan='3'><strong>Nombre más corto:</strong> " + minLetras + " letras</td></tr><tr><td colspan='3'><strong>Nombre más largo:</strong> " + maxLetras + " letras</td></tr></table>";
@@ -122,4 +112,86 @@ function reverse(indice) {
             botones[indice].value = "Reverse";
         }
     }*/
+}
+
+function obtenerEstadisticas() {
+    var totalLetras = 0;
+    var minLetras = nombres[0].length; // Suponemos que el primer nombre es el más corto inicialmente
+    var maxLetras = nombres[0].length; // Igualmente, el primer nombre es el más largo al principio
+
+    // Recorrer todos los nombres para calcular las estadísticas
+    for (var i = 0; i < nombres.length; i++) {
+        var longitud = nombres[i].length;
+        totalLetras += longitud;
+
+        // Verificar el nombre más corto
+        if (longitud < minLetras) {
+            minLetras = longitud;
+        }
+
+        // Verificar el nombre más largo
+        if (longitud > maxLetras) {
+            maxLetras = longitud;
+        }
+    }
+
+    // Calcular el promedio de la longitud de los nombres
+    var PromedioLongitudNombres = (totalLetras / nombres.length).toFixed(2);
+
+    // Retornar un array con las estadísticas
+    return [totalLetras, minLetras, maxLetras, PromedioLongitudNombres];
+}
+
+function info(indice){
+
+    // Nombre y su longitud
+    var nombreSeleccionado = nombres[indice];
+    var longitudNombre = nombreSeleccionado.length;
+
+    // Llama a la funcion para obtener la estadisticas
+    var estadisticas = obtenerEstadisticas();
+
+    //Pilla los datos de la funcion
+    var totalLetras = estadisticas[0];
+    var minLetras = estadisticas[1];
+    var maxLetras = estadisticas[2];
+    var PromedioLongitudNombres = estadisticas[3];
+    var numVocales = contarVocales(nombreSeleccionado);
+
+    // Hace una comparacion del nombre seleccionado con el promedio, determina si es el mas corto, el mas largo o esta en el promedio
+    var comparacionPromedio = "Está en el promedio";
+    if (longitudNombre < PromedioLongitudNombres) {
+        comparacionPromedio = "Por debajo del promedio";
+    } else if (longitudNombre > PromedioLongitudNombres) {
+        comparacionPromedio = "Por encima del promedio";
+    }
+
+    // Comparar si el nombre seleccionado es el más corto o el más largo
+    var tipoNombre = "No es el más largo ni el más corto";
+    if (longitudNombre === minLetras) {
+        tipoNombre = "Nombre más corto";
+    } else if (longitudNombre === maxLetras) {
+        tipoNombre = "Nombre más largo";
+    }
+
+    var infoDetalles = "<h3>Información</h3>";
+    infoDetalles += "<p><strong>Nombre: </strong> " + nombreSeleccionado + "</p> <p><strong>Longitud del nombre: </strong> " + longitudNombre + " letras</p>";
+    infoDetalles += "<p><strong>Comparación con el promedio: </strong> " + comparacionPromedio + "</p><p><strong>Tipo de nombre: </strong> " + tipoNombre + "</p> <p><strong>Número de vocales: </strong> " + numVocales + "</p>";
+
+    document.getElementById('DatosNombre').innerHTML = infoDetalles;
+
+}
+
+function contarVocales(nombre) {
+    var vocales = "aeiouAEIOU"; 
+    var contador = 0;
+    
+    // Recorremos cada letra del nombre
+    for (var i = 0; i < nombre.length; i++) {
+        if (vocales.indexOf(nombre[i]) !== -1) { 
+            contador++;
+        }
+    }
+
+    return contador;
 }
