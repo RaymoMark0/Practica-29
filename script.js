@@ -64,9 +64,32 @@ function CrearTabla() {
     for (var i = 0; i < nombres.length; i++) { // Bucle para recorrer el array
         TablaDatos += "<tr><td>"+(i + 1)+"</td> <td onclick='Seleccionar(" + i + ")'>"+ nombres[i] +"</td><td><input type='button' class='boton2' value='Eliminar' onclick='EliminarNombre(" + i + ")'><input type='button' class='boton2' value='Información' onclick='info(" + i + ")'><input type='button' class='botonrev' value='Reverse' onclick='reverse(" + i + ")'></td></tr>";
     }
-    TablaDatos += "<tr><td><strong>Total de Alumnos:</strong>" + " "+ nombres.length + "</td></tr></table>";
+    TablaDatos += "<tr><td><strong>Total de Alumnos:</strong>" + " "+ nombres.length + "</td></tr>";
+
+    // Esto son las estadisticas de los nombres
+    var totalLetras = 0;
+    var minLetras = nombres[0].length;
+    var maxLetras = nombres[0].length;
+
+    for (var i = 0; i < nombres.length; i++) {
+        var longitud = nombres[i].length;
+        totalLetras += longitud;
+
+        if (longitud < minLetras) {
+            minLetras = longitud;
+        }
+        if (longitud > maxLetras) {
+            maxLetras = longitud;
+        }
+    }
+
+    var PromedioLongitudNombres = (totalLetras / nombres.length).toFixed(2);
+
+    //Añadir las estadisticas al final
+    TablaDatos += "<tr><td colspan='3'><strong>Promedio de longitud:</strong> " + PromedioLongitudNombres + " letras</td></tr><tr><td colspan='3'><strong>Nombre más corto:</strong> " + minLetras + " letras</td></tr><tr><td colspan='3'><strong>Nombre más largo:</strong> " + maxLetras + " letras</td></tr></table>";
 
     document.getElementById('tabla').innerHTML = TablaDatos; 
+
 }
 
 //Función cambiar el tema a modo oscuro
