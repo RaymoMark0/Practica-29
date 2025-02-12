@@ -217,3 +217,33 @@ function BuscarNombre() {
         document.getElementById("mensaje").innerHTML = "El nombre '" + nombreBuscado + "' no se encuentra en la lista.";
     }
 }
+
+function ReemplazarNombre() {
+    var nombreBuscado = document.getElementById("buscarNombre").value.toLowerCase();
+    var nombreNuevo = document.getElementById("reemplazarNombre").value;
+
+    if (nombreBuscado === "" || nombreNuevo === "") {
+        document.getElementById("mensaje").innerHTML = "Por favor, ingrese el nombre a buscar y el nuevo nombre.";
+        return;
+    }
+
+    var cambios = 0;
+
+    // Se recorre la lista para buscar el nombre que se quiere reemplazar
+    for (var i = 0; i < nombres.length; i++) {
+        if (nombres[i].toLowerCase() === nombreBuscado) {
+            nombres[i] = nombreNuevo;
+            cambios++;
+        }
+    }
+
+    if (cambios > 0) {
+        document.getElementById("mensaje").innerHTML = "Se reemplazaron " + cambios + " coincidencias de '" + nombreBuscado + "' por '" + nombreNuevo + "'.";
+        CrearTabla();
+    } else {
+        document.getElementById("mensaje").innerHTML = "No hay coincidencias'" + nombreBuscado + "'.";
+    }
+}
+
+
+
