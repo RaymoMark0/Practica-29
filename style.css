@@ -67,7 +67,7 @@ p{
     display: flex;
     align-self: start;
 }
-#nombres{
+#nombres,#reemplazarNombre,#buscarNombre{
     background-color: #ccccccd8;
     text-align: center;
     width: 200px;
@@ -76,7 +76,7 @@ p{
     transition: 0.3s ease;
     padding: 10px;
 }
-#nombres:hover{ 
+#nombres:hover,#reemplazarNombre:hover,#buscarNombre:hover{ 
     background-color: white; 
     border-color: #00a2ff00;  
     box-shadow:1px 1px 1px rgba(0, 0, 0, 0.068); 
