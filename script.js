@@ -195,3 +195,25 @@ function contarVocales(nombre) {
 
     return contador;
 }
+
+function BuscarNombre() {
+    var nombreBuscado = document.getElementById("buscarNombre").value.toLowerCase();
+    var contador = 0;
+
+    if (nombreBuscado === "") {
+        document.getElementById("mensaje").innerHTML = "Por favor, ingrese un nombre para buscar.";
+        return;
+    }
+
+    for (var i = 0; i < nombres.length; i++) {
+        if (nombres[i].toLowerCase() === nombreBuscado) {
+            contador++;
+        }
+    }
+
+    if (contador > 0) {
+        document.getElementById("mensaje").innerHTML = "El nombre '" + nombreBuscado + "' aparece " + contador + " veces.";
+    } else {
+        document.getElementById("mensaje").innerHTML = "El nombre '" + nombreBuscado + "' no se encuentra en la lista.";
+    }
+}
