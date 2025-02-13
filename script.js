@@ -174,8 +174,8 @@ function info(indice){
         tipoNombre = "Nombre más largo";
     }
 
-    var infoDetalles = "<h3>Información</h3>";
-    infoDetalles += "<p><strong>Nombre: </strong> " + nombreSeleccionado + "</p> <p><strong>Longitud del nombre: </strong> " + longitudNombre + " letras</p>";
+    var infoDetalles = "";
+    infoDetalles += "<p><strong>Información</strong></p>"+ "<p><strong>Nombre: </strong> "+ nombreSeleccionado + "</p> <p><strong>Longitud del nombre: </strong> " + longitudNombre + " letras</p>";
     infoDetalles += "<p><strong>Comparación con el promedio: </strong> " + comparacionPromedio + "</p><p><strong>Tipo de nombre: </strong> " + tipoNombre + "</p> <p><strong>Número de vocales: </strong> " + numVocales + "</p>";
 
     document.getElementById('DatosNombre').innerHTML = infoDetalles;

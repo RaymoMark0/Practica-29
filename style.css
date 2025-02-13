@@ -4,7 +4,11 @@
 }
 
 body{
-    background-image: url('bg2.avif');    
+    background-image: url('bg2.avif');  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     font-family:"Open Sans", serif;    
     height: 100vh;
 }
@@ -25,12 +29,12 @@ h1{
 
 }
 p{
-    font-size: 30px;
+    font-size: 18px;
     display: flex;  
     align-items: center;
     justify-content: center;
-    color: #00507f;
-    padding-top: 20px;
+    color: #ffffff;
+    margin: 20px;
 }
 .caja1{
     background-color:#5b536eaf;
@@ -239,4 +243,20 @@ button:active{
     background-color: #6464645e;
     transition: 0.2s ease;
     color: rgb(255, 255, 255); 
+}
+.infoDiv{ 
+    border-radius: 0.5em;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 12px; 
+    margin-left: 8%;
+    background-color:  #f1a32d1f; 
+    transition: 0.3s ease;
+    color: white;
+    border:none;
+    padding: 20px;
+}
+.infoDiv:hover{
+    background-color: rgba(255, 177, 61, 0.247); 
 }
