@@ -245,24 +245,5 @@ function ReemplazarNombre() {
     }
 }
 
-// function ReemplazarNombrePasoAPaso() {
-//     var nombreBuscado = document.getElementById("buscarNombre").value.toLowerCase();
-//     var nombreNuevo = document.getElementById("reemplazarNombre").value;
-//     var indiceActual = 0;
-
-//     function buscarSiguiente() {
-//         while (indiceActual < nombres.length) {
-//             if (nombres[indiceActual].toLowerCase() === nombreBuscado) {
-//                 nombres[indiceActual] = nombreNuevo;
-//                 CrearTabla();
-//                 document.getElementById("mensaje").innerHTML = Reemplazado en la posición ${indiceActual + 1}.;
-//                 indiceActual++;
-//                 return;
-//             }
-//             indiceActual++;
-//         }
-//         document.getElementById("mensaje").innerHTML = "No hay más coincidencias.";
-//     }
-// }
 
 
